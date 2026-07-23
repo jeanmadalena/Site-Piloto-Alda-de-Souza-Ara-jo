@@ -3,12 +3,9 @@ import {
   Users,
   Quote,
   GraduationCap,
-  Sparkles,
-  ArrowUpRight,
   Send,
-  Building,
 } from 'lucide-react';
-import { OPPORTUNITIES, TESTIMONIALS, SCHOOL_INFO } from '../data/schoolData';
+import { TESTIMONIALS, SCHOOL_INFO } from '../data/schoolData';
 
 export const ComunidadeSection: React.FC = () => {
   return (
@@ -18,18 +15,18 @@ export const ComunidadeSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
             <Users className="w-4 h-4 text-amber-700" />
-            <span>Nossa Comunidade e Futuro</span>
+            <span>Ex-Alunos</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-blue-950 tracking-tight">
-            Depoimentos de Ex-Alunos e Oportunidades
+            Depoimentos de quem passou por aqui
           </h2>
           <p className="mt-3 text-slate-600 text-base sm:text-lg">
-            Confira as histórias de sucesso de ex-alunos que passaram pela EMEFI Alda de Souza Araújo e acompanhe os processos seletivos abertos.
+            Confira as histórias e memórias marcantes de ex-alunos que passaram pela EMEFI Prof.ª Alda de Souza Araújo.
           </p>
         </div>
 
         {/* Depoimentos de Ex-Alunos */}
-        <div className="mb-16">
+        <div className="mb-12">
           <h3 className="text-xl font-bold text-blue-950 mb-6 flex items-center gap-2">
             <GraduationCap className="w-6 h-6 text-amber-500" />
             <span>Histórias de Quem Voou Longe</span>
@@ -68,80 +65,28 @@ export const ComunidadeSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Oportunidades / Processos Seletivos */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-200 pb-4">
-            <div>
-              <h3 className="text-2xl font-black text-blue-950">
-                Processos Seletivos e Vestibulinhos
-              </h3>
-              <p className="text-xs text-slate-500">
-                Oportunidades de bolsas, cursos técnicos e vestibulares abertos aos estudantes
-              </p>
-            </div>
-            <span className="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full">
-              Ano Letivo 2026
-            </span>
+        {/* Chamada para ex-alunos enviarem depoimentos */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-blue-900 text-white p-6 sm:p-8 rounded-3xl shadow-md border border-blue-800">
+          <div className="space-y-1 text-center sm:text-left">
+            <h4 className="font-bold text-amber-300 text-base sm:text-lg">
+              É ex-aluno da EMEFI Prof.ª Alda de Souza Araújo?
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-200">
+              Compartilhe sua trajetória e seu depoimento com a nossa comunidade escolar!
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {OPPORTUNITIES.map((opp) => (
-              <div
-                key={opp.id}
-                className="p-6 bg-slate-50 rounded-2xl border border-slate-200 space-y-3 flex flex-col justify-between hover:border-blue-300 transition-colors"
-              >
-                <div className="space-y-2">
-                  <div className="flex justify-between items-start gap-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-blue-900 bg-blue-100 px-2.5 py-0.5 rounded">
-                      {opp.institution}
-                    </span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">
-                      {opp.status}
-                    </span>
-                  </div>
-
-                  <h4 className="font-bold text-blue-950 text-base">{opp.title}</h4>
-
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {opp.description}
-                  </p>
-                </div>
-
-                <div className="pt-3 border-t border-slate-200 space-y-1 text-[11px] text-slate-500">
-                  <p>
-                    Público: <span className="font-bold text-slate-700">{opp.targetAudience}</span>
-                  </p>
-                  <p>
-                    Prazo: <span className="font-bold text-amber-700">{opp.deadline}</span>
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Dica para ex-alunos enviarem depoimentos */}
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 bg-blue-50 p-6 rounded-2xl border border-blue-100">
-            <div className="space-y-1 text-center sm:text-left">
-              <h4 className="font-bold text-blue-950 text-sm">
-                É ex-aluno da EMEFI Profª Alda de Souza Araújo?
-              </h4>
-              <p className="text-xs text-slate-600">
-                Compartilhe sua trajetória com a comunidade escolar e inspire novas gerações!
-              </p>
-            </div>
-
-            <a
-              href={`https://wa.me/${SCHOOL_INFO.whatsappRaw}?text=${encodeURIComponent(
-                'Olá! Sou ex-aluno da EMEFI Alda de Souza Araújo e gostaria de enviar meu depoimento para o site!'
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xs rounded-xl shadow transition-colors flex items-center gap-1.5 shrink-0"
-            >
-              <Send className="w-3.5 h-3.5 text-amber-400" />
-              <span>Enviar meu Depoimento</span>
-            </a>
-          </div>
+          <a
+            href={`https://wa.me/${SCHOOL_INFO.whatsappRaw}?text=${encodeURIComponent(
+              'Olá! Sou ex-aluno da EMEFI Alda de Souza Araújo e gostaria de enviar meu depoimento para o site!'
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold text-xs sm:text-sm rounded-xl shadow transition-colors flex items-center gap-2 shrink-0"
+          >
+            <Send className="w-4 h-4 text-blue-950" />
+            <span>Enviar meu Depoimento</span>
+          </a>
         </div>
       </div>
     </section>

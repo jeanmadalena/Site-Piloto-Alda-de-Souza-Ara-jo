@@ -45,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'matricula', label: 'Matrícula', icon: FileText },
     { id: 'eventos', label: 'Cronograma e Eventos', icon: Calendar },
     { id: 'resultados', label: 'Resultados e Gestão', icon: ShieldCheck },
-    { id: 'comunidade', label: 'Ex-Alunos e Vagas', icon: Users },
+    { id: 'comunidade', label: 'Depoimentos de quem passou por aqui', icon: Users },
   ];
 
   const handleNavClick = (id: string) => {
