@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   ShieldCheck,
   BarChart2,
   FileCheck2,
   Building2,
   Users,
-  Eye,
-  EyeOff,
+  Sparkles,
 } from 'lucide-react';
 import { SCHOOL_INFO } from '../data/schoolData';
 
 export const ResultadosSection: React.FC = () => {
-  const [showIdeb, setShowIdeb] = useState(false);
-
   return (
     <section id="resultados" className="py-16 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,50 +44,30 @@ export const ResultadosSection: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* IDEB */}
+            {/* ESCOLA 5.0 E INOVAÇÃO */}
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="flex justify-between items-start">
                   <span className="text-xs font-bold uppercase text-slate-400">
-                    IDEB da Escola
+                    Educação 5.0
                   </span>
-                  <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">
-                    Índice Oficial MEC
+                  <span className="text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">
+                    Inovação SJC
                   </span>
                 </div>
 
-                {showIdeb ? (
-                  <div className="space-y-2 animate-fadeIn">
-                    <p className="text-4xl font-black text-blue-900">5,6</p>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      Índice de Desenvolvimento da Educação Básica da EMEFI Profª Alda de Souza Araújo em São José dos Campos.
-                    </p>
-                  </div>
-                ) : (
-                  <div className="py-3 px-4 bg-slate-50 border border-slate-200 rounded-xl text-center space-y-2">
-                    <p className="text-xs font-bold text-slate-500">
-                      O índice do IDEB está protegido por padrão.
-                    </p>
-                  </div>
-                )}
+                <div className="space-y-2">
+                  <p className="text-4xl font-black text-blue-900">1ª da Rede</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    Primeira escola 5.0 da rede municipal de São José dos Campos, equipada com Sala Google, tecnologias educacionais e foco no aprendizado integral.
+                  </p>
+                </div>
               </div>
 
-              <button
-                onClick={() => setShowIdeb(!showIdeb)}
-                className="w-full py-2.5 px-4 bg-blue-900 hover:bg-blue-800 text-amber-300 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm"
-              >
-                {showIdeb ? (
-                  <>
-                    <EyeOff className="w-4 h-4 text-amber-400" />
-                    <span>Ocultar Nota do IDEB</span>
-                  </>
-                ) : (
-                  <>
-                    <Eye className="w-4 h-4 text-amber-400" />
-                    <span>Visualizar Nota do IDEB</span>
-                  </>
-                )}
-              </button>
+              <div className="pt-2 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-blue-900">
+                <Sparkles className="w-4 h-4 text-amber-500" />
+                <span>Pioneirismo em Inovação Tecnológica</span>
+              </div>
             </div>
 
             {/* APROVAÇÕES TÉCNICAS */}

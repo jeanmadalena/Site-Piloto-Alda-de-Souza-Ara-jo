@@ -104,10 +104,10 @@ export const ACHIEVEMENTS: Achievement[] = [
    ========================================================================== */
 export const INSTITUTIONAL_METRICS: Metric[] = [
   {
-    label: "IDEB da Escola",
-    value: "5,6",
-    description: "Índice oficial de Desenvolvimento da Educação Básica da EMEFI Profª Alda de Souza Araújo.",
-    trend: "Métrica Oficial MEC",
+    label: "Escola 5.0 Inovadora",
+    value: "1ª da Rede",
+    description: "Primeira escola 5.0 da rede municipal de São José dos Campos com foco em tecnologia e inovação.",
+    trend: "Inovação Tecnológica",
   },
   {
     label: "Aprovação Colégio EMBRAER",

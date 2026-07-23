@@ -58,12 +58,12 @@ export const SobreSection: React.FC = () => {
                 A proposta pedagógica da E.M.E.F.I. Profª Alda de Souza Araújo baseia-se em um currículo próprio do município alinhado à BNCC e ao Currículo Paulista, com foco na educação integral, equidade e inclusão. Nossa matriz curricular desenvolve as dimensões cognitiva, emocional, cultural e física dos estudantes. Oferecemos contraturno rico em tecnologia, arte, atividades culturais, Idiomas, esportes, e reforço focado em vestibulinhos públicos.
               </p>
 
-              {/* Foto da Fachada da Escola */}
+              {/* Foto da Entrada Principal da Escola */}
               <div className="pt-4">
                 <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-blue-950">
                   <img 
                     src={SCHOOL_INFO.fachadaImageUrl} 
-                    alt="Fachada Principal - EMEFI Prof.ª Alda de Souza Araújo" 
+                    alt="EMEFI Prof.ª Alda de Souza Araújo" 
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.currentTarget;
@@ -77,7 +77,7 @@ export const SobreSection: React.FC = () => {
                     className="w-full h-auto max-h-72 object-cover object-top"
                   />
                   <div className="p-3 bg-blue-950 text-white text-xs flex justify-between items-center">
-                    <span className="font-bold text-amber-300">Fachada da EMEFI Prof.ª Alda de Souza Araújo</span>
+                    <span className="font-bold text-amber-300">EMEFI Prof.ª Alda de Souza Araújo - Sede Própria</span>
                     <a 
                       href={SCHOOL_INFO.fachadaDriveUrl}
                       target="_blank"

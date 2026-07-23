@@ -40,10 +40,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
+    { id: 'eventos', label: 'Calendário e Cronograma', icon: Calendar },
     { id: 'sobre', label: 'Sobre a Patrona', icon: BookOpen },
     { id: 'ensino', label: 'Ensino Integral', icon: Award },
     { id: 'matricula', label: 'Matrícula', icon: FileText },
-    { id: 'eventos', label: 'Cronograma e Eventos', icon: Calendar },
     { id: 'resultados', label: 'Resultados e Gestão', icon: ShieldCheck },
     { id: 'comunidade', label: 'Depoimentos de quem passou por aqui', icon: Users },
   ];

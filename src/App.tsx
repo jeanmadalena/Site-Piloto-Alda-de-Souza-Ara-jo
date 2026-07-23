@@ -49,11 +49,11 @@ export default function App() {
     const handleScroll = () => {
       const sections = [
         'home',
+        'eventos',
         'conquistas',
         'sobre',
         'ensino',
         'matricula',
-        'eventos',
         'resultados',
         'comunidade',
       ];
@@ -99,6 +99,9 @@ export default function App() {
           />
         </div>
 
+        {/* Seção Galeria de Eventos, Calendário Escolar, Estrutura Bimestral e Cronogramas */}
+        <EventosSection />
+
         {/* Seção Destaque "Nossas Conquistas" */}
         <ConquistasSection />
 
@@ -111,10 +114,7 @@ export default function App() {
         {/* Seção Matrícula e Documentação Interativa */}
         <MatriculaSection />
 
-        {/* Seção Galeria de Eventos e Calendário Escolar */}
-        <EventosSection />
-
-        {/* Seção Resultados Oficiais (IDEB/Aprovações) e Transparência Legais */}
+        {/* Seção Resultados Oficiais e Transparência Legais */}
         <ResultadosSection />
 
         {/* Seção Interação / Depoimentos de Ex-Alunos e Processos Seletivos */}
