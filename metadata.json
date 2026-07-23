@@ -1,0 +1,6 @@
+{
+  "name": "E.M.E.F.I. Profª Alda de Souza Araújo",
+  "description": "Website Oficial da E.M.E.F.I. Profª Alda de Souza Araújo - Escola Municipal de Ensino Fundamental Integral em São José dos Campos",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
