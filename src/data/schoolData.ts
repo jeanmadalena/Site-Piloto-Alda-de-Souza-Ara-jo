@@ -19,6 +19,8 @@ export const SCHOOL_INFO = {
   cnpjPix: "47206039/0001-23",
   pixKeyClean: "47206039000123",
   customLogoUrl: "https://lh3.googleusercontent.com/d/1PubpTrkN5kzYPMnkcNzr3RdAv5dXWNwC",
+  fachadaImageUrl: "https://lh3.googleusercontent.com/d/1pHk5PepvGq5WPqTTT1kfhL3go21hNA4A=s1600",
+  fachadaDriveUrl: "https://drive.google.com/file/d/1pHk5PepvGq5WPqTTT1kfhL3go21hNA4A/view?usp=drive_link",
   instagramUrl: "https://www.instagram.com/emefialda/",
   driveUrl: "https://drive.google.com/drive/u/0/folders/1MvaJj_0dh_T0jhcXBKIf2x-u6J8Y9Q_I",
   calendarioPdfUrl: "https://drive.google.com/file/d/17q2IKtCQdKWs1kLAlgCdt7vnbY8kI8lJ/view?usp=drive_link",

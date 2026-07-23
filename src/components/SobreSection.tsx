@@ -9,7 +9,7 @@ import {
   Building,
   GraduationCap,
 } from 'lucide-react';
-import { BIOGRAFIA_PATRONA, MISSAO_VISAO_VALORES } from '../data/schoolData';
+import { BIOGRAFIA_PATRONA, MISSAO_VISAO_VALORES, SCHOOL_INFO } from '../data/schoolData';
 import { SchoolLogo } from './SchoolLogo';
 
 export const SobreSection: React.FC = () => {
@@ -48,7 +48,7 @@ export const SobreSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Proposta Pedagógica em Destaque */}
+          {/* Proposta Pedagógica e Foto da Fachada em Destaque */}
             <div className="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 space-y-3">
               <h3 className="text-xl font-bold text-blue-950 flex items-center gap-2">
                 <Target className="w-5 h-5 text-amber-500" />
@@ -57,6 +57,38 @@ export const SobreSection: React.FC = () => {
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                 A proposta pedagógica da E.M.E.F.I. Profª Alda de Souza Araújo baseia-se em um currículo próprio do município alinhado à BNCC e ao Currículo Paulista, com foco na educação integral, equidade e inclusão. Nossa matriz curricular desenvolve as dimensões cognitiva, emocional, cultural e física dos estudantes. Oferecemos contraturno rico em tecnologia, arte, atividades culturais, Idiomas, esportes, e reforço focado em vestibulinhos públicos.
               </p>
+
+              {/* Foto da Fachada da Escola */}
+              <div className="pt-4">
+                <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-blue-950">
+                  <img 
+                    src={SCHOOL_INFO.fachadaImageUrl} 
+                    alt="Fachada Principal - EMEFI Prof.ª Alda de Souza Araújo" 
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.triedFallback) {
+                        target.dataset.triedFallback = 'true';
+                        target.src = 'https://drive.google.com/uc?export=view&id=1pHk5PepvGq5WPqTTT1kfhL3go21hNA4A';
+                      } else {
+                        target.src = '/fachada-escola.jpg';
+                      }
+                    }}
+                    className="w-full h-auto max-h-72 object-cover object-top"
+                  />
+                  <div className="p-3 bg-blue-950 text-white text-xs flex justify-between items-center">
+                    <span className="font-bold text-amber-300">Fachada da EMEFI Prof.ª Alda de Souza Araújo</span>
+                    <a 
+                      href={SCHOOL_INFO.fachadaDriveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[11px] text-amber-300 hover:underline font-semibold"
+                    >
+                      Ver no Google Drive ↗
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
