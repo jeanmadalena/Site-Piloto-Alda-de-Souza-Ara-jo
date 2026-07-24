@@ -21,33 +21,33 @@ export const HERO_SLIDES: CarouselSlide[] = [
   },
   {
     id: 'escola-5-0',
-    driveId: 'local-escola-50',
-    imageUrl: '/escola-50.jpg',
-    fallbackUrl: '/escola-50.jpg',
+    driveId: '1pqrJ9LTg3hBxcqg-F7CKBN4lIaOtsI-c',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1pqrJ9LTg3hBxcqg-F7CKBN4lIaOtsI-c=s1600',
+    fallbackUrl: 'https://drive.google.com/uc?export=view&id=1pqrJ9LTg3hBxcqg-F7CKBN4lIaOtsI-c',
     caption: 'Primeira escola 5.0 de São José dos Campos',
     badge: 'Inovação e Tecnologia',
   },
   {
     id: 'aluna-ana-beatriz',
-    driveId: 'local-ana-beatriz',
-    imageUrl: '/aluna-ana-beatriz.jpg',
-    fallbackUrl: '/aluna-ana-beatriz.jpg',
+    driveId: '1V_i8FyiEiqmeLRmOSXYd6QLQ3M4ipcCn',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1V_i8FyiEiqmeLRmOSXYd6QLQ3M4ipcCn=s1600',
+    fallbackUrl: 'https://drive.google.com/uc?export=view&id=1V_i8FyiEiqmeLRmOSXYd6QLQ3M4ipcCn',
     caption: 'Nossa aluna Ana Beatriz, que, com determinação e talento, foi selecionada entre os 160 melhores do país para participar de um projeto de iniciação científica. Na foto: Ana Beatriz e sua mãe, Dayse Jéssica',
     badge: 'Orgulho Acadêmico',
   },
   {
     id: 'sala-google',
-    driveId: 'local-sala-google',
-    imageUrl: '/sala-google.jpg',
-    fallbackUrl: '/sala-google.jpg',
+    driveId: '1SGdwTQfIf5fb6jMR-G6QLT90nGVjUJYM',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1SGdwTQfIf5fb6jMR-G6QLT90nGVjUJYM=s1600',
+    fallbackUrl: 'https://drive.google.com/uc?export=view&id=1SGdwTQfIf5fb6jMR-G6QLT90nGVjUJYM',
     caption: 'Sala Google',
     badge: 'Ambiente de Aprendizagem',
   },
   {
     id: 'sede-escola',
-    driveId: 'local-sede-escola',
-    imageUrl: '/sede-escola.jpg',
-    fallbackUrl: '/sede-escola.jpg',
+    driveId: '1B92pi2F1ys6qvZ8Fgiu905fBES806cLF',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1B92pi2F1ys6qvZ8Fgiu905fBES806cLF=s1600',
+    fallbackUrl: 'https://drive.google.com/uc?export=view&id=1B92pi2F1ys6qvZ8Fgiu905fBES806cLF',
     caption: 'EMEFI Prof.ª Alda de Souza Araújo',
     badge: 'Nossa Escola',
   },
@@ -121,6 +121,13 @@ export const HeroCarousel: React.FC = () => {
                     if (!target.dataset.triedFallback) {
                       target.dataset.triedFallback = 'true';
                       target.src = slide.fallbackUrl;
+                    } else if (!target.dataset.triedLocal) {
+                      target.dataset.triedLocal = 'true';
+                      if (slide.id === 'escola-5-0') target.src = '/escola-50.jpg';
+                      else if (slide.id === 'aluna-ana-beatriz') target.src = '/aluna-ana-beatriz.jpg';
+                      else if (slide.id === 'sala-google') target.src = '/sala-google.jpg';
+                      else if (slide.id === 'sede-escola') target.src = '/sede-escola.jpg';
+                      else target.src = '/fachada-escola.jpg';
                     }
                   }}
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
