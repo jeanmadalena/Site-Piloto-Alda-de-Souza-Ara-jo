@@ -81,6 +81,7 @@ export const NoticiasSection: React.FC<NoticiasSectionProps> = ({
                 title: initMatch.title,
                 category: initMatch.category,
                 summary: initMatch.summary,
+                imageUrl: initMatch.imageUrl,
               };
             }
             return p;
