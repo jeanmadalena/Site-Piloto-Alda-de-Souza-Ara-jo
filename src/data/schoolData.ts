@@ -139,7 +139,7 @@ export const CRONOGRAMA_EVENTOS: EventItem[] = [
     date: "01/08/2026",
     category: "Reunião",
     description: "Sábado letivo dedicado à reunião de pais e responsáveis para acompanhamento do desempenho escolar e entregas pedagógicas.",
-    imageUrl: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/reuniao-pais-01082026.jpg",
     location: "EMEFI Profª Alda de Souza Araújo",
   },
   {
@@ -148,7 +148,7 @@ export const CRONOGRAMA_EVENTOS: EventItem[] = [
     date: "02/09/2026",
     category: "Reunião",
     description: "Reunião ordinária do Conselho de Escola e da Associação de Amigos da Escola (AAE) para alinhamento de projetos e gestão transparente.",
-    imageUrl: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/escola-50.jpg",
     location: "Auditório da Escola",
   },
   {
@@ -157,7 +157,7 @@ export const CRONOGRAMA_EVENTOS: EventItem[] = [
     date: "26/09/2026",
     category: "Cultural",
     description: "Exposição de artes, trabalhos científicos, projetos de tecnologia e apresentação de alunos e oficinas de Educação Integral.",
-    imageUrl: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/sede-escola.jpg",
     location: "Pátio e Quadra Poliesportiva",
   },
   {
@@ -166,7 +166,7 @@ export const CRONOGRAMA_EVENTOS: EventItem[] = [
     date: "17/10/2026",
     category: "Reunião",
     description: "Encontro de integração entre comunidade e equipe escolar com avaliação do bimestre e alinhamento de metas.",
-    imageUrl: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80",
+    imageUrl: "/sala-google.jpg",
     location: "Salas de Aula da EMEFI",
   },
 ];
