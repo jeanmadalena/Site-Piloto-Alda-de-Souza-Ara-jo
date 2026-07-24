@@ -67,12 +67,7 @@ export const SobreSection: React.FC = () => {
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.currentTarget;
-                      if (!target.dataset.triedFallback) {
-                        target.dataset.triedFallback = 'true';
-                        target.src = 'https://drive.google.com/uc?export=view&id=1pHk5PepvGq5WPqTTT1kfhL3go21hNA4A';
-                      } else {
-                        target.src = '/fachada-escola.jpg';
-                      }
+                      target.src = '/fachada-escola.jpg';
                     }}
                     className="w-full h-auto max-h-72 object-cover object-top"
                   />

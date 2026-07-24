@@ -331,6 +331,13 @@ export const NoticiasSection: React.FC<NoticiasSectionProps> = ({
                       src={post.imageUrl}
                       alt={post.title}
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.triedFallback) {
+                          target.dataset.triedFallback = 'true';
+                          target.src = '/fachada-escola.jpg';
+                        }
+                      }}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -456,6 +463,13 @@ export const NoticiasSection: React.FC<NoticiasSectionProps> = ({
                   src={viewingPost.imageUrl}
                   alt={viewingPost.title}
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    if (!target.dataset.triedFallback) {
+                      target.dataset.triedFallback = 'true';
+                      target.src = '/fachada-escola.jpg';
+                    }
+                  }}
                   className="w-full h-full object-cover"
                 />
               </div>
