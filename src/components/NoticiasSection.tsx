@@ -72,11 +72,24 @@ export const NoticiasSection: React.FC<NoticiasSectionProps> = ({
       if (saved) {
         const parsed: NewsPost[] = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
+          // Atualizar posts iniciais padrão com as informações atualizadas
+          const updatedParsed = parsed.map((p) => {
+            const initMatch = INITIAL_NEWS_POSTS.find((i) => i.id === p.id);
+            if (initMatch) {
+              return {
+                ...p,
+                title: initMatch.title,
+                category: initMatch.category,
+                summary: initMatch.summary,
+              };
+            }
+            return p;
+          });
           // Mesclar novos posts iniciais que não estejam no localStorage
           const missingInitial = INITIAL_NEWS_POSTS.filter(
-            (initPost) => !parsed.some((p) => p.id === initPost.id)
+            (initPost) => !updatedParsed.some((p) => p.id === initPost.id)
           );
-          setPosts([...missingInitial, ...parsed]);
+          setPosts([...missingInitial, ...updatedParsed]);
           return;
         }
       }

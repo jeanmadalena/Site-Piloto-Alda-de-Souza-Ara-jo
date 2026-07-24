@@ -58,6 +58,14 @@ export const HeroCarousel: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [zoomedSlide, setZoomedSlide] = useState<CarouselSlide | null>(null);
 
+  // Precarregamento automático de todas as imagens do carrossel na memória do navegador
+  useEffect(() => {
+    HERO_SLIDES.forEach((slide) => {
+      const img = new Image();
+      img.src = slide.imageUrl;
+    });
+  }, []);
+
   // Auto-play do carrossel a cada 6 segundos
   useEffect(() => {
     if (isPaused || zoomedSlide !== null) return;
@@ -105,6 +113,8 @@ export const HeroCarousel: React.FC = () => {
                 <img
                   src={slide.imageUrl}
                   alt={slide.caption}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     const target = e.currentTarget;

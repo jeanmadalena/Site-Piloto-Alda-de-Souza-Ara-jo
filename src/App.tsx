@@ -7,7 +7,6 @@ import { EnsinoSection } from './components/EnsinoSection';
 import { MatriculaSection } from './components/MatriculaSection';
 import { EventosSection } from './components/EventosSection';
 import { NoticiasSection } from './components/NoticiasSection';
-import { ResultadosSection } from './components/ResultadosSection';
 import { ComunidadeSection } from './components/ComunidadeSection';
 import { PixDonationModal } from './components/PixDonationModal';
 import { RestrictedAreaModal } from './components/RestrictedAreaModal';
@@ -56,7 +55,6 @@ export default function App() {
         'sobre',
         'ensino',
         'matricula',
-        'resultados',
         'comunidade',
       ];
 
@@ -118,9 +116,6 @@ export default function App() {
 
         {/* Seção Matrícula e Documentação Interativa */}
         <MatriculaSection />
-
-        {/* Seção Resultados Oficiais e Transparência Legais */}
-        <ResultadosSection />
 
         {/* Seção Interação / Depoimentos de Ex-Alunos e Processos Seletivos */}
         <ComunidadeSection />

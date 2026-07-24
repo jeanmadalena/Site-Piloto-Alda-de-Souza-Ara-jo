@@ -340,9 +340,9 @@ export const INITIAL_NEWS_POSTS: NewsPost[] = [
   },
   {
     id: "noticia-3",
-    title: "Espaço Integrado: Sala Google Acessível para Todos os Estudantes",
-    category: "Projeto",
-    summary: "Ambiente multifuncional permite aulas interativas, pesquisas guiadas e projetos colaborativos entre as turmas.",
+    title: "Sala Google",
+    category: "Notícia",
+    summary: "Ambiente multifuncional permite aulas interativas, pesquisas guiadas e trabalhos colaborativos entre as turmas.",
     content: "A Sala Google é um dos espaços mais dinâmicos do nosso prédio. Equipada para receber turmas do Ensino Fundamental I e II, o espaço promove a metodologia ativa, onde os alunos aprendem criando apresentações, documentos compartilhados e robótica educacional em ambiente totalmente seguro e supervisionado.",
     imageUrl: "https://lh3.googleusercontent.com/d/1SGdwTQfIf5fb6jMR-G6QLT90nGVjUJYM=s1600",
     author: "Orientação Educacional",

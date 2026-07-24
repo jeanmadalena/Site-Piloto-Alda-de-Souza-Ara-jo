@@ -46,7 +46,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'sobre', label: 'Sobre a Patrona', icon: BookOpen },
     { id: 'ensino', label: 'Ensino Integral', icon: Award },
     { id: 'matricula', label: 'Matrícula', icon: FileText },
-    { id: 'resultados', label: 'Resultados e Gestão', icon: ShieldCheck },
     { id: 'comunidade', label: 'Depoimentos de quem passou por aqui', icon: Users },
   ];
 
