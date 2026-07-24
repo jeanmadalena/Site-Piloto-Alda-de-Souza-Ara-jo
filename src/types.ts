@@ -52,3 +52,15 @@ export interface Metric {
   description: string;
   trend?: string;
 }
+
+export interface NewsPost {
+  id: string;
+  title: string;
+  category: 'Notícia' | 'Comunicado' | 'Conquista' | 'Projeto' | 'Evento';
+  summary: string;
+  content: string;
+  imageUrl?: string;
+  author: string;
+  date: string;
+  featured?: boolean;
+}

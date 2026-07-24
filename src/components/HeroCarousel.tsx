@@ -12,6 +12,14 @@ export interface CarouselSlide {
 
 export const HERO_SLIDES: CarouselSlide[] = [
   {
+    id: 'reuniao-pais-01082026',
+    driveId: 'local-reuniao',
+    imageUrl: '/reuniao-pais-01082026.jpg',
+    fallbackUrl: '/reuniao-pais-01082026.jpg',
+    caption: 'Reunião de Pais e Responsáveis no dia 01/08/2026 (8º/9º Anos das 8:30 às 9:50 | 6º/7º Anos das 10:10 às 11:30). Haverá venda de deliciosos combos de coxinha e açaí no local!',
+    badge: 'Comunicado • 01/08/2026',
+  },
+  {
     id: 'escola-5-0',
     driveId: '1pqrJ9LTg3hBxcqg-F7CKBN4lIaOtsI-c',
     imageUrl: 'https://lh3.googleusercontent.com/d/1pqrJ9LTg3hBxcqg-F7CKBN4lIaOtsI-c=s1600',

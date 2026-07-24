@@ -17,6 +17,7 @@ import {
   MessageCircle,
   Lock,
   Clock,
+  Newspaper,
 } from 'lucide-react';
 import { SCHOOL_INFO } from '../data/schoolData';
 import { SchoolLogo } from './SchoolLogo';
@@ -40,6 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const navItems = [
     { id: 'home', label: 'Home', icon: Home },
+    { id: 'noticias', label: 'Mural de Notícias', icon: Newspaper },
     { id: 'eventos', label: 'Calendário e Cronograma', icon: Calendar },
     { id: 'sobre', label: 'Sobre a Patrona', icon: BookOpen },
     { id: 'ensino', label: 'Ensino Integral', icon: Award },

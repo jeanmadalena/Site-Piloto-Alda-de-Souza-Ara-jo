@@ -1,4 +1,4 @@
-import { Achievement, DocumentItem, EventItem, Testimonial, Opportunity, Metric } from '../types';
+import { Achievement, DocumentItem, EventItem, Testimonial, Opportunity, Metric, NewsPost } from '../types';
 
 /* ==========================================================================
    DADOS INSTITUCIONAIS - E.M.E.F.I. Profª Alda de Souza Araújo
@@ -300,3 +300,54 @@ export const OPPORTUNITIES: Opportunity[] = [
     status: "Em breve",
   },
 ];
+
+/* ==========================================================================
+   PUBLICAÇÕES E NOTÍCIAS OFICIAIS (PAINEL ADMINISTRATIVO)
+   ========================================================================== */
+export const INITIAL_NEWS_POSTS: NewsPost[] = [
+  {
+    id: "comunicado-reuniao-pais-01082026",
+    title: "Convocação: Reunião de Pais e Responsáveis - 01/08/2026",
+    category: "Comunicado",
+    summary: "Reunião de Pais em 01/08/2026. 8º e 9º Anos (8:30 às 9:50) e 6º e 7º Anos (10:10 às 11:30). Haverá venda de combos de coxinha e açaí no local!",
+    content: "A EMEFI Prof.ª Alda de Souza Araújo convida cordialmente todos os pais e responsáveis para a nossa Reunião de Pais, que acontecerá no dia 01 de Agosto de 2026 (01/08/2026).\n\nLema: \"Aprender é voar fora da asa\"\n\n🕒 HORÁRIOS DAS REUNIÕES POR TURMA:\n• 8º e 9º Anos: das 08:30 às 09:50\n• 6º e 7º Anos: das 10:10 às 11:30\n\n🥟 ALIMENTAÇÃO NO LOCAL:\nHaverá venda de deliciosos combos de coxinha e açaí disponíveis no local durante o evento para recepção e integração de toda a comunidade escolar.\n\nA presença de todos os pais e responsáveis é de fundamental importância!",
+    imageUrl: "/reuniao-pais-01082026.jpg",
+    author: "Equipe Gestora",
+    date: "2026-07-23",
+    featured: true,
+  },
+  {
+    id: "noticia-1",
+    title: "Primeira Escola 5.0 da Rede Municipal de São José dos Campos",
+    category: "Notícia",
+    summary: "A EMEFI Prof.ª Alda de Souza Araújo torna-se referência com tecnologia de ponta, Sala Google e novos recursos pedagógicos digitais.",
+    content: "Com imenso orgulho, nossa unidade escolar consolida o pioneirismo como a Primeira Escola 5.0 de São José dos Campos. A estrutura conta com conectividade em todas as salas, chromebooks para os estudantes, painéis interativos e formação continuada para nossos professores. Essa conquista fortalece a aprendizagem personalizada, estimulando a inovação e o pensamento crítico desde os primeiros anos do Ensino Fundamental.",
+    imageUrl: "https://lh3.googleusercontent.com/d/1pqrJ9LTg3hBxcqg-F7CKBN4lIaOtsI-c=s1600",
+    author: "Equipe Gestora",
+    date: "2026-07-20",
+    featured: true,
+  },
+  {
+    id: "noticia-2",
+    title: "Aluna Ana Beatriz é Selecionada entre os 160 Melhores do País",
+    category: "Conquista",
+    summary: "Estudante da EMEFI Alda de Souza Araújo garante vaga em projeto nacional de iniciação científica com grande destaque.",
+    content: "Parabenizamos nossa querida aluna Ana Beatriz que, com muita dedicação, curiosidade e talento acadêmico, conquistou uma das 160 vagas nacionais para participar de um prestigiado programa de iniciação científica juvenil. Na foto comemorativa, vemos Ana Beatriz acompanhada de sua mãe, Dayse Jéssica. Toda a comunidade escolar celebra essa admirável vitória!",
+    imageUrl: "https://lh3.googleusercontent.com/d/1V_i8FyiEiqmeLRmOSXYd6QLQ3M4ipcCn=s1600",
+    author: "Coordenação Pedagógica",
+    date: "2026-07-15",
+    featured: true,
+  },
+  {
+    id: "noticia-3",
+    title: "Espaço Integrado: Sala Google Acessível para Todos os Estudantes",
+    category: "Projeto",
+    summary: "Ambiente multifuncional permite aulas interativas, pesquisas guiadas e projetos colaborativos entre as turmas.",
+    content: "A Sala Google é um dos espaços mais dinâmicos do nosso prédio. Equipada para receber turmas do Ensino Fundamental I e II, o espaço promove a metodologia ativa, onde os alunos aprendem criando apresentações, documentos compartilhados e robótica educacional em ambiente totalmente seguro e supervisionado.",
+    imageUrl: "https://lh3.googleusercontent.com/d/1SGdwTQfIf5fb6jMR-G6QLT90nGVjUJYM=s1600",
+    author: "Orientação Educacional",
+    date: "2026-07-10",
+    featured: false,
+  },
+];
+

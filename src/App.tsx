@@ -6,6 +6,7 @@ import { SobreSection } from './components/SobreSection';
 import { EnsinoSection } from './components/EnsinoSection';
 import { MatriculaSection } from './components/MatriculaSection';
 import { EventosSection } from './components/EventosSection';
+import { NoticiasSection } from './components/NoticiasSection';
 import { ResultadosSection } from './components/ResultadosSection';
 import { ComunidadeSection } from './components/ComunidadeSection';
 import { PixDonationModal } from './components/PixDonationModal';
@@ -49,6 +50,7 @@ export default function App() {
     const handleScroll = () => {
       const sections = [
         'home',
+        'noticias',
         'eventos',
         'conquistas',
         'sobre',
@@ -98,6 +100,9 @@ export default function App() {
             onOpenHorariosModal={() => setHorariosModalOpen(true)}
           />
         </div>
+
+        {/* Seção Mural de Notícias e Publicações (Painel Administrativo) */}
+        <NoticiasSection onOpenRestrictedModal={() => setRestrictedModalOpen(true)} />
 
         {/* Seção Galeria de Eventos, Calendário Escolar, Estrutura Bimestral e Cronogramas */}
         <EventosSection />
