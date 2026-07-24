@@ -21,7 +21,7 @@ import {
 import { NewsPost } from '../types';
 import { INITIAL_NEWS_POSTS, SCHOOL_INFO } from '../data/schoolData';
 
-const LOCAL_STORAGE_KEY = 'emefi_alda_noticias';
+const LOCAL_STORAGE_KEY = 'emefi_alda_noticias_v2';
 const ADMIN_PASSWORD = 'alda2026';
 
 interface NoticiasSectionProps {
