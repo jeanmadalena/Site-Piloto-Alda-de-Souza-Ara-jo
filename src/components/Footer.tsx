@@ -119,10 +119,10 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate('noticias')}
+                  onClick={() => onNavigate('resultados')}
                   className="hover:text-amber-300 transition-colors"
                 >
-                  Mural de Notícias
+                  Resultados e AAE
                 </button>
               </li>
             </ul>
