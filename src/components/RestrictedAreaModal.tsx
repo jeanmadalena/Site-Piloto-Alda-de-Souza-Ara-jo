@@ -86,126 +86,92 @@ export const RestrictedAreaModal: React.FC<RestrictedAreaModalProps> = ({
           </p>
         </div>
 
-        {/* BOTÃO EM DESTAQUE: RESERVAS ALDA (EXCLUSIVO PROFESSORES) */}
-        <div className="bg-gradient-to-r from-amber-50 to-orange-50 border-2 border-amber-400/60 rounded-2xl p-4 space-y-2.5 shadow-sm">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-amber-400 text-blue-950 flex items-center justify-center shrink-0 font-bold shadow-xs">
-              <Calendar className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-sm font-black text-blue-950">
-                Reservas Alda
-              </h4>
-              <p className="text-[11px] text-slate-600 font-medium">
-                Sistema exclusivo de reservas para professores da escola.
-              </p>
-            </div>
-          </div>
-
-          <button
-            onClick={handleAccessReservas}
-            className="w-full py-3 bg-amber-400 hover:bg-amber-300 text-blue-950 font-black text-xs sm:text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 group border border-amber-500/40"
-          >
-            <Calendar className="w-4 h-4 text-blue-900 group-hover:scale-110 transition-transform" />
-            <span>Acessar Reservas Alda</span>
-            <ExternalLink className="w-4 h-4 text-blue-950 group-hover:translate-x-0.5 transition-transform" />
-          </button>
-        </div>
-
         {!isAuthenticated ? (
-          <div className="space-y-4">
-            <div className="relative flex py-1 items-center">
-              <div className="flex-grow border-t border-slate-200"></div>
-              <span className="flex-shrink mx-3 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-                ou faça login na Área Restrita
-              </span>
-              <div className="flex-grow border-t border-slate-200"></div>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-3.5">
-              {error && (
-                <div className="p-3 bg-red-50 border border-red-200 text-red-800 text-xs font-semibold rounded-xl flex items-center gap-2">
-                  <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
-                  <span>{error}</span>
-                </div>
-              )}
-
-              <div className="space-y-1">
-                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
-                  Usuário / E-mail Institucional:
-                </label>
-                <div className="relative">
-                  <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                  <input
-                    type="text"
-                    value={login}
-                    onChange={(e) => setLogin(e.target.value)}
-                    placeholder="ex: servidor@edusjc.sp.gov.br"
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white"
-                    required
-                  />
-                </div>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {error && (
+              <div className="p-3 bg-red-50 border border-red-200 text-red-800 text-xs font-semibold rounded-xl flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
+                <span>{error}</span>
               </div>
+            )}
 
-              <div className="space-y-1">
-                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
-                  Senha de Acesso:
-                </label>
-                <div className="relative">
-                  <KeyRound className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                  <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="••••••••"
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white"
-                    required
-                  />
-                </div>
+            <div className="space-y-1">
+              <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                Usuário / E-mail Institucional:
+              </label>
+              <div className="relative">
+                <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <input
+                  type="text"
+                  value={login}
+                  onChange={(e) => setLogin(e.target.value)}
+                  placeholder="ex: servidor@edusjc.sp.gov.br"
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white"
+                  required
+                />
               </div>
-
-              <button
-                type="submit"
-                className="w-full py-3 bg-blue-900 hover:bg-blue-800 text-white font-black text-sm rounded-xl shadow-md transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Lock className="w-4 h-4 text-amber-400" />
-                <span>Entrar no Drive Institucional</span>
-              </button>
-            </form>
-          </div>
-        ) : (
-          <div className="space-y-4 text-center bg-blue-50 border border-blue-200 p-5 rounded-2xl animate-fadeIn">
-            <div className="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center mx-auto font-bold">
-              <ShieldCheck className="w-6 h-6 text-emerald-600" />
             </div>
 
             <div className="space-y-1">
-              <h4 className="text-base font-bold text-blue-950">Acesso Autorizado!</h4>
+              <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                Senha de Acesso:
+              </label>
+              <div className="relative">
+                <KeyRound className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white"
+                  required
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3.5 bg-blue-900 hover:bg-blue-800 text-white font-black text-sm rounded-xl shadow-md transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <Lock className="w-4 h-4 text-amber-400" />
+              <span>Entrar na Área Restrita</span>
+            </button>
+          </form>
+        ) : (
+          <div className="space-y-5 text-center bg-blue-50 border border-blue-200 p-6 rounded-2xl animate-fadeIn">
+            <div className="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center mx-auto font-bold">
+              <ShieldCheck className="w-7 h-7 text-emerald-600" />
+            </div>
+
+            <div className="space-y-1">
+              <h4 className="text-lg font-bold text-blue-950">Acesso Autorizado!</h4>
               <p className="text-xs text-slate-600">
                 Identificado como: <span className="font-bold text-blue-900">{login}</span>
               </p>
             </div>
 
             <p className="text-xs text-slate-600 leading-relaxed">
-              Você pode acessar os documentos pedagógicos no Google Drive ou o sistema de Reservas Alda.
+              Selecione o sistema desejado para prosseguir com seu trabalho pedagógico ou administrativo:
             </p>
 
-            <div className="space-y-2 pt-1">
+            <div className="space-y-3 pt-1">
+              {/* Botão Destaque: Reservas Alda */}
               <button
-                onClick={handleAccessDrive}
-                className="w-full py-3 bg-blue-900 hover:bg-blue-800 text-white font-black text-xs sm:text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+                onClick={handleAccessReservas}
+                className="w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-blue-950 font-black text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 border border-amber-500/40 group"
               >
-                <Folder className="w-4 h-4 text-amber-400" />
-                <span>Abrir Pasta no Google Drive</span>
+                <Calendar className="w-4 h-4 text-blue-950 group-hover:scale-110 transition-transform" />
+                <span>Acessar Reservas Alda</span>
                 <ExternalLink className="w-4 h-4" />
               </button>
 
+              {/* Botão: Google Drive */}
               <button
-                onClick={handleAccessReservas}
-                className="w-full py-3 bg-amber-400 hover:bg-amber-300 text-blue-950 font-black text-xs sm:text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
+                onClick={handleAccessDrive}
+                className="w-full py-3.5 bg-blue-900 hover:bg-blue-800 text-white font-black text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2"
               >
-                <Calendar className="w-4 h-4" />
-                <span>Acessar Reservas Alda</span>
+                <Folder className="w-4 h-4 text-amber-400" />
+                <span>Abrir Pasta no Google Drive</span>
                 <ExternalLink className="w-4 h-4" />
               </button>
             </div>
