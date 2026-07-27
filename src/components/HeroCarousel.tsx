@@ -33,6 +33,24 @@ export const HERO_SLIDES: CarouselSlide[] = [
     slogan: 'Aprender é voar fora da asa',
   },
   {
+    id: 'sprix-champions-1',
+    driveId: '1BmTMxvYjh0JBg5VZx3fenDmuf9SKYGNo',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1BmTMxvYjh0JBg5VZx3fenDmuf9SKYGNo=s1600',
+    fallbackUrl: 'https://drive.google.com/uc?export=view&id=1BmTMxvYjh0JBg5VZx3fenDmuf9SKYGNo',
+    eventTitle: 'Campeões Nacionais no SPRIX Brasil Championship',
+    badge: '1º Lugar Nacional • SPRIX',
+    caption: '1° Campeonato Nacional de programação para estudantes. Parabéns a GP Aline Sagioro, Professor Marcelo, e aos alunos Miguel, Wendel, Renan, Rafaela e Ana Marcela!!!!',
+  },
+  {
+    id: 'sprix-champions-2',
+    driveId: '1z1qesHXMDQQ42yaKGPKg3rj3EGK0U7J2',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1z1qesHXMDQQ42yaKGPKg3rj3EGK0U7J2=s1600',
+    fallbackUrl: 'https://drive.google.com/uc?export=view&id=1z1qesHXMDQQ42yaKGPKg3rj3EGK0U7J2',
+    eventTitle: 'Campeões Nacionais no SPRIX Brasil Championship',
+    badge: '1º Lugar Nacional • SPRIX',
+    caption: '1° Campeonato Nacional de programação para estudantes. Parabéns a GP Aline Sagioro, Professor Marcelo, e aos alunos Miguel, Wendel, Renan, Rafaela e Ana Marcela!!!!',
+  },
+  {
     id: 'escola-5-0',
     driveId: '1pqrJ9LTg3hBxcqg-F7CKBN4lIaOtsI-c',
     imageUrl: 'https://lh3.googleusercontent.com/d/1pqrJ9LTg3hBxcqg-F7CKBN4lIaOtsI-c=s1600',
@@ -198,6 +216,12 @@ export const HeroCarousel: React.FC = () => {
                 )}
               </div>
 
+              {currentSlide.caption && (
+                <p className="text-xs sm:text-sm font-medium text-slate-100 leading-relaxed">
+                  {currentSlide.caption}
+                </p>
+              )}
+
               {/* Horários dos Anos */}
               {currentSlide.schedules && currentSlide.schedules.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -300,9 +324,16 @@ export const HeroCarousel: React.FC = () => {
               </div>
 
               {zoomedSlide.eventTitle ? (
-                <h3 className="text-xl sm:text-2xl font-black text-white">
-                  {zoomedSlide.eventTitle}
-                </h3>
+                <>
+                  <h3 className="text-xl sm:text-2xl font-black text-white">
+                    {zoomedSlide.eventTitle}
+                  </h3>
+                  {zoomedSlide.caption && (
+                    <p className="text-sm sm:text-base font-semibold text-slate-100 leading-relaxed">
+                      {zoomedSlide.caption}
+                    </p>
+                  )}
+                </>
               ) : (
                 <p className="text-sm sm:text-base font-bold text-white leading-relaxed">
                   {zoomedSlide.caption}

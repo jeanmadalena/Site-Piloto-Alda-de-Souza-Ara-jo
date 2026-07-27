@@ -63,11 +63,11 @@ export const MISSAO_VISAO_VALORES = {
 export const ACHIEVEMENTS: Achievement[] = [
   {
     id: "sprix-champion",
-    title: "Campeã no SPRIX Campeonato 2025 – Brasil",
+    title: "Campeões Nacionais no SPRIX Brasil Championship",
     category: "Tecnologia",
     year: "2025",
-    description: "A EMEFI Profª Alda de Souza Araújo, localizada em São José dos Campos (SP), sagrou-se campeã no SPRIX Campeonato 2025 – Brasil. A competição nacional de programação e inovação tecnológica reuniu estudantes do Ensino Fundamental para o desenvolvimento de jogos digitais e projetos tecnológicos na plataforma QUREO.",
-    badge: "Campeonato Nacional de Tecnologia",
+    description: "1° Campeonato Nacional de programação para estudantes. Parabéns a GP Aline Sagioro, Professor Marcelo, e aos alunos Miguel, Wendel, Renan, Rafaela e Ana Marcela pela conquista histórica no SPRIX Brasil Championship!",
+    badge: "1º Lugar Nacional • SPRIX",
     iconName: "Cpu",
   },
   {
